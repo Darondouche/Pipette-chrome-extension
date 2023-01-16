@@ -1,0 +1,21 @@
+{
+    "manifest_version": 3,
+    "author": "Darondouche",
+    "name": "Eyedropper tool",
+    "description": "Eyedropper tool for chrome",
+    "version": "1.0",
+    "background":{
+        "service-worker": "background.js"
+    },
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": ["background.js"]
+        }
+    ],
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": "color.png"
+    },
+    "permissions": ["activeTab"]
+  }
